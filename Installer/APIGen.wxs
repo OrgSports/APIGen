@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
+	<Product Id='B675BD5C-8448-4417-91F7-AE914D946FDC' Name='API Generator' Language='1033' 
+            Version='1.0.0.283' Manufacturer='Attachmate Corporation' 
+			UpgradeCode='{9FFB5002-B7C3-4CD8-BF1F-70D6BA0D5632}'>
+		<Package Id='B826469C-A427-47b7-BA14-EB22A693F5B6'
+			Description='API Generator Windows Installer package'
+			Comments='The first attempt at creating an API Generator Windows Installer database with WIX. Pretty cool, huh?'
+			Manufacturer='Attachmate Corporation' InstallerVersion='200' Compressed='yes' />
+
+		 <Icon Id="apigen.ico" src="apigen.ico"/>
+		 <Icon Id="help.ico" src="help.ico"/>
+
+
+		<Media Id='1' Cabinet='APIGen.cab' EmbedCab='yes' />
+		<Property Id='INSTALLLEVEL' Value="5" />
+
+		<Condition Message="You need to be an administrator to install the API Generator.">
+		  Privileged
+		</Condition>
+
+		<Condition Message="If you can see this something is wrong with way the UIRef tag is working.">
+		  UILevel = 5
+		</Condition>
+
+		<Condition Message="The custom action dll didn't work as expected.">
+		  PIDACCEPTED = 0
+		</Condition>
+
+		<Property Id="MFCPRESENT">
+			<DirectorySearch Id="MFCFileDir" Path="[SystemFolder]" Depth="0">
+				<FileSearch Id="MFCLibrary" Name="MFC71.DLL" />
+			</DirectorySearch>
+		</Property>
+
+		<Property Id="PIDACCEPTED" Value="0"/>
+
+		<Condition Message="The MFC 7.1 runtime DLL is required to run the API Generator.  If this message is presented, indicating that you do not have that file present, you can obtain one with the latest Windows updates that include the .Net framework.">
+		  MFCPRESENT
+		</Condition>
+
+		<Directory Id='TARGETDIR' Name='SourceDir'>
+			<Directory Id='ProgramFilesFolder' Name='APIGen'>
+				<Directory Id='AttachmateFolder' Name='ATMWRQ' LongName='Attachmate'>
+					<Directory Id='INSTALLDIR' Name='APIGen' LongName='API Generator'>
+						
+						<Component Id='APIGen' Guid='D1587779-0F9D-4480-974F-24860B0C61AD'>
+							<File Id='APIGen' Name='APIGen.exe' DiskId='1' src='APIGen.exe'>
+								<Shortcut Id="startmenuAPIGen" Directory="ProgramMenuDir" Name="APIGIcon" 
+									  LongName="API Generator" WorkingDirectory='INSTALLDIR'
+									  Icon="apigen.ico" IconIndex="0" 
+									  Advertise="yes"/>
+							</File>
+							<Registry Id='APIGenInstallDir' Root='HKLM' Key='Software\Attachmate\APIGen' Name='InstallDir' Action='write' Type='string'>
+								<RegistryValue>[INSTALLDIR]</RegistryValue>
+							</Registry>
+						</Component>
+
+						<Component Id='HelpSystem' Guid='53A727F9-8E2D-4950-A672-82316528B662'>
+							<File Id='APIGenH' Name='help.htm' DiskId='1' src='help.htm'>
+								<Shortcut Id="helpAPIGen" Directory="ProgramMenuDir" Name="HelpIcon" 
+									  LongName="Help System" WorkingDirectory='INSTALLDIR'
+									  Icon="help.ico" IconIndex="0" 
+									  Advertise="yes"/>
+							
+							</File>
+							<File Id='APIGenGenerateGif' Name='generate.gif' DiskId='1' src='generate.gif' />
+							<File Id='APIGenParamsGif' Name='setparam.gif' DiskId='1' src='setparam.gif' />
+						</Component>
+
+
+					</Directory>
+				</Directory>
+			</Directory>
+
+			<Directory Id="ProgramMenuFolder" Name="ProgMenu" LongName="Programs">
+				<Directory Id="ProgramMenuDir" Name='APIGen' LongName="API Generator" />
+			</Directory>
+
+
+		</Directory>
+
+		<Feature Id='APIGenFeature' Title='Code Generator' Description='The code generator.'
+			Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR' AllowAdvertise='no' Absent='disallow'>
+				<ComponentRef Id='APIGen' />
+		</Feature>
+
+		<Feature Id='HelpSystem' Title='Help system' Description='HTML Help file.'
+			Display='expand' Level='3' ConfigurableDirectory='INSTALLDIR'>
+				<ComponentRef Id='HelpSystem' />
+		</Feature>
+
+		<CustomAction Id="CheckingPID" BinaryKey="CheckPID" DllEntry="CheckPID" />
+
+		<InstallExecuteSequence>
+			<LaunchConditions After='AppSearch' />
+			<Custom Action="CheckingPID" After="CostFinalize" />
+			<RemoveExistingProducts After='InstallFinalize' />
+		</InstallExecuteSequence>
+
+		<Binary Id="CheckPID" SourceFile="APIGAction.dll" />
+
+	    <UIRef Id="WixUI" />
+
+		<Property Id="PIDTemplate"><![CDATA[12345<### ###>@@@@@]]></Property>
+
+	</Product>
+</Wix>
+

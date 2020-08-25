@@ -1,0 +1,5 @@
+bin\Debug\AGEHLCPP.dll
+bin\Debug\AGEHLCPP.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AGEHLCPP.dll
+obj\Debug\AGEHLCPP.pdb

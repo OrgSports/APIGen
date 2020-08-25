@@ -1,0 +1,62 @@
+
+auducacd.duc.auburn.edu 
+ 
+ 
+New and varied products:
+1. Synapta ITask Java -- variable/object creation & cleanup
+2. VHI VB 6.0
+
+Variation in running platforms:
+3. MCS Java
+
+Ease of use & variety of development environments:
+4. Extra! OLE Auto
+5. Reflection OLE Auto
+6. ViewMaster
+7. Airlines SDK
+8. EHLLAPI / IHLLAPI
+ 
+VHI:
+
+'*** ConnectToModel
+   csServer = "150.215.72.139"
+   csModel = "CCSDemo"
+   csUserID = ""
+   csPassword = ""
+
+ 
+'*** PerformTableProcedure
+   csTable = "Accounts"
+   csProcedure = "AccountSearch"
+   Set csaDataInputValues = New AppConnStringMap
+   Set csFilter = New AppConnStringMap
+        csFilter.Add "MiddleInitial", "c"
+        csFilter.Add "LastName", "smith"
+        csFilter.Add "State", "ri"
+   bCaseSensitive = False
+ 
+
+
+CICS Bridge COM ASP
+
+// *** ConnectBridge 
+csIPAddr = "149.82.215.1"; 
+lPort = 2317; 
+lTermModel = 2; 
+csUserID = "DEVTST1"; 
+csPassword = "DEVTST1"; 
+csTerminalPool = "BRIDGEPOOL"; 
+csNetworkName = ""; 
+TerminalFacilityLike = ""; 
+
+// *** SendKeysGetString 
+csKeys = "TCHP@E1@E10101@E"; 
+nRow = 1; 
+nColumn = 1; 
+nLength = 0; 
+
+// *** SendKeys 
+csKeys = "@c@C"; 
+ 
+ 
+

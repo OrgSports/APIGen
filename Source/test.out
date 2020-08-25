@@ -1,0 +1,23 @@
+Source\APIGenDlg.cpp:3235:	cagtest = new CAG_EHL_CPP;
+Source\APIGenDlg.cpp:3668:		cagtest = new CAG_EHL_CPP;
+Source\APIGenDlg.cpp:3686:		cagtest = new CAG_IHL_CPP;
+Source\APIGenDlg.cpp:6205:			cagtest = new CAG_EHL_CPP;
+Source\APIGenDlg.cpp:6251:			cagtest = new CAG_IHL_CPP;
+Source\CAG_EHL_CPP.cpp:5:#include "CAG_EHL_CPP.h"
+Source\CAG_EHL_CPP.cpp:10:CAG_EHL_CPP::CAG_EHL_CPP()
+Source\CAG_EHL_CPP.cpp:17:CAG_EHL_CPP::~CAG_EHL_CPP()
+Source\CAG_EHL_CPP.cpp:23:void CAG_EHL_CPP::generateHeader(CStringArray* pcsaHeader,
+Source\CAG_EHL_CPP.cpp:85:void CAG_EHL_CPP::appendBody(int nFunctionNum,
+Source\CAG_EHL_CPP.cpp:605:void CAG_EHL_CPP::finalize(CStringArray* pcsaBody)
+Source\CAG_EHL_CPP.cpp:636:void CAG_EHL_CPP::declareVariable(CListBox* agVariable,
+Source\CAG_EHL_CPP.cpp:643:void CAG_EHL_CPP::checkDebug(bool b_Debug,
+Source\CAG_EHL_CPP.cpp:650:void CAG_EHL_CPP::resetVariableFlags()
+Source\CAG_IHL_CPP.cpp:5:#include "CAG_IHL_CPP.h"
+Source\CAG_IHL_CPP.cpp:8:CAG_IHL_CPP::CAG_IHL_CPP()
+Source\CAG_IHL_CPP.cpp:13:CAG_IHL_CPP::~CAG_IHL_CPP()
+Source\CAG_IHL_CPP.cpp:18:void CAG_IHL_CPP::declareVariable(AG_VARIABLE agVariable,
+Source\CAG_IHL_CPP.cpp:57:void CAG_IHL_CPP::generateHeader(CStringArray* pcsaHeader,
+Source\CAG_IHL_CPP.cpp:202:void CAG_IHL_CPP::appendBody(int nFunctionNum,
+Source\CAG_IHL_CPP.cpp:900:void CAG_IHL_CPP::finalize(CStringArray* pcsaBody)
+Source\CAG_IHL_CPP.cpp:933:void CAG_IHL_CPP::checkDebug(bool b_Debug,
+Source\CAG_IHL_CPP.cpp:940:void CAG_IHL_CPP::resetVariableFlags()

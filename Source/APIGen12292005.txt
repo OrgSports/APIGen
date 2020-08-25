@@ -1,0 +1,11 @@
+rem *********************************************************************APIGen
+rem               AttachmateWRQ MSI Summary Info Command Line
+rem
+rem
+rem   Generated:   Thu Dec 29 22:06:18 2005
+
+rem
+rem ****************************************************************************
+
+Msiinfo.exe <filename> -P ;1033 -V abcdefg -G 110
+

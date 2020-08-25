@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[APIGen.dsp]
+SCC_Aux_Path = "\\eai\API\API\DevSupport_SS"
+SCC_Project_Name = "$/Level 4 - Work In Progress/DonCa/APIGen", DFHAAAAA
+
+[APIGen.sln]
+SCC_Aux_Path = "\\eai\API\API\DevSupport_SS"
+SCC_Project_Name = "$/Level 4 - Work In Progress/DonCa/APIGen", DFHAAAAA
+
+[APIGen.vcproj]
+SCC_Aux_Path = "\\eai\API\API\DevSupport_SS"
+SCC_Project_Name = "$/Level 4 - Work In Progress/DonCa/APIGen", DFHAAAAA

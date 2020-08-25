@@ -1,0 +1,8 @@
+; APIGAction.def : Declares the module parameters for the DLL.
+
+LIBRARY      "APIGAction"
+DESCRIPTION  'APIGAction Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CheckPID

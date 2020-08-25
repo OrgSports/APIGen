@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: APIGAction - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/APIGAction.res" /d "NDEBUG" /d "_AFXDLL" "C:\PROJECTS\APIGEN\INSTALLER\APIGAction\APIGAction.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP170.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/APIGAction.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\PROJECTS\APIGEN\INSTALLER\APIGAction\APIGAction.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP170.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP171.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/APIGAction.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\PROJECTS\APIGEN\INSTALLER\APIGAction\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP171.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP172.tmp" with contents
+[
+msi.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/APIGAction.pdb" /machine:I386 /def:".\APIGAction.def" /out:"Release/APIGAction.dll" /implib:"Release/APIGAction.lib" 
+.\Release\APIGAction.obj
+.\Release\StdAfx.obj
+.\Release\APIGAction.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP172.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+APIGAction.cpp
+Linking...
+   Creating library Release/APIGAction.lib and object Release/APIGAction.exp
+
+
+
+<h3>Results</h3>
+APIGAction.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,775 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\APIGen.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\APIGen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 456, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About APIGen"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,134,17,20,20
+    LTEXT           "APIGen Version 1.0285 -- Jan. 4, 2006",IDC_STATIC,162,
+                    15,149,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005-2006,  Attachmate Corporation",
+                    IDC_STATIC,135,60,184,8
+    DEFPUSHBUTTON   "OK",IDOK,193,225,50,14,WS_GROUP
+    LTEXT           "Attachmate API Code Generator",IDC_STATIC,166,30,122,
+                    8
+    LTEXT           "Project Vitkus",IDC_STATIC,201,45,52,8
+    CONTROL         "",IDLISTCTRL_APIGEN_ABOUT,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,22,120,411,96
+    LTEXT           "Project status keys: TEST-- ready for test;   FORM -- Formatting Required;   FUNC -- Not all functions implemented; ",
+                    IDC_STATIC,33,86,361,8
+    LTEXT           "TRANS -- Translation required;   FPR -- Feature Proposal Submitted",
+                    IDC_STATIC,97,100,212,8
+END
+
+IDD_APIGEN_DIALOG DIALOGEX 0, 0, 540, 431
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Generator"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Settings",IDC_STATIC,15,15,204,203
+    LTEXT           "API",IDC_STATIC,25,27,36,8
+    LISTBOX         IDLIST_API_CHOICE,24,36,87,101,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Prompt for parameter values",IDCHECK_PROMPT_FOR_VALUES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,150,108,10
+    CONTROL         "&Output code to existing file",IDCHECK_FILE_INSERT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,167,109,10
+    LTEXT           "Terminal type",IDSTATIC_TERMINAL_TYPE,129,27,74,8
+    LISTBOX         IDLIST_TERMINAL_TYPE,132,37,76,41,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Language",IDC_STATIC,132,88,55,8
+    LISTBOX         IDLIST_LANGUAGE_CHOICE,132,97,76,41,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Generate source",IDBUTTON_GENERATE_SOURCE,138,152,67,
+                    14
+    PUSHBUTTON      "&Append source",IDBUTTON_APPEND_SOURCE,138,174,67,14
+    PUSHBUTTON      "&Finalize listing",IDBUTTON_FINALIZE,138,195,67,14
+    GROUPBOX        "Actions",IDC_STATIC,241,15,153,203
+    LTEXT           "Function",IDC_STATIC,248,27,70,8
+    LISTBOX         IDLIST_FUNCTION_CHOICE,245,36,143,174,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Close",IDOK,43,226,54,14
+    PUSHBUTTON      "&Help",IDBUTTON_HELP,118,226,54,14
+    PUSHBUTTON      "Save to &file",IDBUTTON_SAVE_TO_FILE,254,226,54,14
+    PUSHBUTTON      "&New project",IDBUTTON_NEW_PROJECT,327,226,54,14
+    LISTBOX         IDLIST_OUTPUT_TEXT,22,250,370,169,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Call parameters",IDSTATIC_PARAMETER_GROUP,413,15,112,
+                    129
+    LTEXT           "String",IDSTATIC_STRING,421,28,32,8
+    EDITTEXT        IDEDIT_STRING,421,38,93,14,ES_AUTOHSCROLL
+    LTEXT           "String length",IDSTATIC_STRINGLENGTH,421,60,92,8
+    EDITTEXT        IDEDIT_STRING_LENGTH,421,71,40,14,ES_AUTOHSCROLL
+    LTEXT           "Return code",IDSTATIC_RETURNCODE,421,96,78,8
+    LTEXT           "&Row",IDSTATIC_ROW,421,28,92,8
+    LTEXT           "&Column",IDSTATIC_COLUMN,421,60,78,8
+    EDITTEXT        IDEDIT_ROW,421,38,44,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_COLUMN,421,71,44,14,ES_AUTOHSCROLL
+    LTEXT           "Length",IDSTATIC_LENGTH,421,96,54,8
+    EDITTEXT        IDEDIT_LENGTH,421,106,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "No function arguments",IDSTATIC_NO_PARAMETERS,413,15,
+                    112,129
+    LTEXT           "String",IDSTATIC_PUTSTRING,421,96,63,8
+    EDITTEXT        IDEDIT_PUTSTRING,421,106,93,14,ES_AUTOHSCROLL
+    LTEXT           "Rows moved",IDSTATIC_MOVE_ROWS,421,28,62,8
+    LTEXT           "Columns moved",IDSTATIC_COLUMNS_MOVED,421,60,75,8
+    LTEXT           "Timeout",IDSTATIC_TIMEOUT,421,28,67,8
+    LTEXT           "Keys",IDSTATIC_KEYS,421,60,44,8
+    CONTROL         "Continue to process",IDCHECK_PROCESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,96,91,10
+    EDITTEXT        IDEDIT_TIMEOUT,421,38,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_USERKEYS,421,71,40,14,ES_AUTOHSCROLL
+    LTEXT           "Settle time (ms)",IDSTATIC_SETTLETIME,421,28,69,8
+    EDITTEXT        IDEDIT_SETTLE_TIME,421,38,58,14,ES_AUTOHSCROLL
+    LTEXT           "Close option",IDSTATIC_CLOSEOPTION,421,28,53,8
+    EDITTEXT        IDEDIT_CLOSE_OPTION,421,38,40,14,ES_AUTOHSCROLL
+    LTEXT           "File transfer scheme name",IDSTATIC_FT_SCHEME,421,28,93,
+                    8
+    EDITTEXT        IDEDIT_FILETRANSFER_SCHEME,421,38,93,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDBUTTON_FT_SCHEME_NAME,438,61,50,14
+    CONTROL         "Set scheme ( vs. Get )",IDCHECK_SET_FT_,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,88,96,10
+    LTEXT           "Keyboard map",IDSTATIC_KEYBOARD_MAP,421,28,77,8
+    EDITTEXT        IDEDIT_KEYBOARD_MAP,421,38,93,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDBUTTON_BROWSE_KEYMAP,438,61,50,14
+    CONTROL         "Set keymap ( vs. Get )",IDCHECK_KEYBOARD_MAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,88,92,10
+    LISTBOX         IDLIST_FIELDTYPE,421,38,93,40,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Field type",IDSTATIC_FIELDTYPE,421,28,67,8
+    LISTBOX         IDLIST_MNEMONIC,421,71,78,35,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mnemonic type",IDSTATIC_MNEMONIC,421,60,62,8
+    LTEXT           "Host character set",IDCSTATIC_HOSTCHARSET,421,28,70,8
+    LTEXT           "Host code page",IDSTATIC_HOSTCODEPAGE,421,28,83,8
+    LTEXT           "Model type",IDSTATIC_SCREENMODEL,421,28,77,8
+    LISTBOX         IDLIST_SCREENMODEL,421,38,93,40,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Idle time (ms)",IDSTATIC_IDLETIME,421,28,60,8
+    LTEXT           "Language",IDSTATIC_LANGUAGE,421,28,76,8
+    CONTROL         "Set language ( vs. Get )",IDCHECK_LANGUAGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,60,88,10
+    CONTROL         "Set to Local Mode ( vs. Get )",IDCCHECK_LOCALMODE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,416,29,107,10
+    CONTROL         "Set menu visible ( vs Get)",IDCHECK_SETMENU,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,415,29,96,10
+    CONTROL         "Set session quiet (vs Get)",IDCHECK_SET_SESS_QUIET,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,416,29,95,10
+    LTEXT           "PC filename",IDSTATIC_PC_FILENAME,421,28,87,8
+    EDITTEXT        IDEDIT_PC_FILENAME,421,39,98,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_HOSTFILENAME,421,93,94,14,ES_AUTOHSCROLL
+    LTEXT           "Host filename",IDSTATIC_HOST_FILENAME,421,82,77,8
+    PUSHBUTTON      "Browse",IDBUTTON_FT_FILENAME,445,60,50,14
+    CONTROL         "Show status box",IDCHECK_SHOW_FT_STATUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,121,86,10
+    CONTROL         "Set session visible",IDCHECK_VISIBLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,28,85,10
+    CONTROL         "Signal events continually",IDCCHECK_CONTINUOUS_WAIT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,421,60,92,10
+    LTEXT           "New height (pixels)",IDSTATIC_HEIGHT,421,28,68,8
+    LTEXT           "New width (pixels)",IDSTATIC_WIDTH,421,28,66,8
+    CONTROL         "Set height ( vs Get )",IDCHECK_HEIGHT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,60,92,10
+    CONTROL         "Set width (vs Get)",IDCHECK_WIDTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,60,85,10
+    EDITTEXT        IDEDIT_HEIGHT,421,38,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_WIDTH,421,38,40,14,ES_AUTOHSCROLL
+    LISTBOX         IDLIST_WINDOW_STATE,421,56,78,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Window state",IDSTATIC_WINDOWSTATE,432,46,68,8
+    CONTROL         "Set window state (vs Get)",IDCHECK_SET_WINDOWSTATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,416,29,97,10
+    LTEXT           "Session filename",IDSTATIC_SESSIONFILE_NAME,421,28,87,8
+    EDITTEXT        IDEDIT_SESSION_FILENAME,421,39,98,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDBUTTON_SESSION_FILENAME,445,60,50,14
+    CONTROL         "Set timeout (vs Get)",IDCHECK_SETTIMEOUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,421,60,92,10
+    LTEXT           "Socks port",IDSTATIC_SOCKS_PORT,416,29,85,8
+    LTEXT           "Socks address",IDSTATIC_SOCKS_ADDRESS,416,29,85,8
+    LTEXT           "Telnet port",IDSTATIC_TELNET_PORT,421,28,85,8
+    LTEXT           "Telnet address",IDSTATIC_TELNET_ADDRESS,421,28,85,8
+    EDITTEXT        IDEDIT_ARGUMENT1,435,151,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT2,433,178,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT3,434,205,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT4,435,229,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT5,433,257,40,14,ES_AUTOHSCROLL
+    CONTROL         "Passive mode",IDCHECK_PASSIVE_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,413,282,59,10
+    EDITTEXT        IDEDIT_ARGUMENT6,433,298,40,14,ES_AUTOHSCROLL
+    LTEXT           "Static4",IDSTATIC_STRING4,433,322,23,8
+    LTEXT           "Static5",IDSTATIC_STRING5,432,340,23,8
+    LISTBOX         IDLIST_TRANSFER_TYPE,407,337,48,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDLIST_FILE_EXISTS,461,337,48,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enable EAB's",IDCHECK_EABs_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,429,166,59,10
+    EDITTEXT        IDEDIT_ARGUMENT7,465,273,40,14,ES_AUTOHSCROLL
+    LTEXT           "Static",IDSTATIC_6,447,247,19,8
+    EDITTEXT        IDEDIT_ARGUMENT8,439,134,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT9,464,163,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT10,443,187,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT11,438,214,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT12,435,238,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT13,463,203,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_ARGUMENT14,446,287,40,14,ES_AUTOHSCROLL
+    LTEXT           "Static",IDSTATICSTRING8,411,154,19,8
+    LTEXT           "Static",IDSTATICSTRING9,409,168,19,8
+    LTEXT           "Static",IDSTATICSTRING10,413,182,19,8
+    LTEXT           "Static",IDSTATICSTRING11,412,196,19,8
+    LTEXT           "Static",IDSTATICSTRING12,413,211,19,8
+    LTEXT           "Static",IDSTATICSTRING13,412,230,19,8
+    LTEXT           "Static",IDSTATICSTRING14,411,246,19,8
+    LTEXT           "Static",IDSTATICSTRING7,415,314,19,8
+    LISTBOX         IDLIST_PARAMS_1,477,228,48,40,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check1",IDCHECK_PARAM1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,472,315,41,10
+    LISTBOX         IDLIST_PARAMS2,437,377,48,40,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check2",IDCHECK_PARAM2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,468,327,41,10
+    LISTBOX         IDLIST_PARAMS3,475,26,48,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDLIST_PARAMS4,476,74,48,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDLIST_PARAMS5,477,124,48,40,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDMULTILIST_PARAMS1,485,167,48,40,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDMULTILIST_PARAMS2,469,278,48,40,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDMULTILIST_PARAMS3,473,309,48,40,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDMULTILIST_PARAMS4,485,355,48,40,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Check1",IDCHECK_PARAM3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,471,350,41,10
+    CONTROL         "Check3",IDCHECK_PARAM4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,425,271,41,10
+    EDITTEXT        IDEDIT_RETURN_CODE,421,106,44,14,ES_AUTOHSCROLL
+END
+
+IDD_DEPLOY_PARAMS DIALOGEX 0, 0, 292, 343
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Deployment Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,308,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,308,50,14
+    EDITTEXT        IDEDIT_DEPLOY_URL,26,114,221,14,ES_AUTOHSCROLL
+    LTEXT           "MCS Server name",IDC_STATIC,25,100,220,8
+    LTEXT           "Username (optional)",IDC_STATIC,29,34,79,8
+    EDITTEXT        IDEDIT_DEPLOY_USERNAME,26,45,140,14,ES_AUTOHSCROLL
+    GROUPBOX        "OpenChannel parameters",IDC_STATIC,18,17,243,277
+    EDITTEXT        IDEDIT_DEPLOY_PASSWORD,28,77,78,14,ES_AUTOHSCROLL
+    LTEXT           "Password (optional)",IDC_STATIC,29,64,145,8
+    LISTBOX         IDLIST_DEPLOY_LANGUAGE,29,150,48,15,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Language code",IDC_STATIC,30,137,133,8
+    EDITTEXT        IDEDIT_DEPLOY_CHANNEL,29,180,125,14,ES_AUTOHSCROLL
+    LTEXT           "Channel",IDC_STATIC,28,169,140,8
+    LTEXT           "Presentation ID (optional)",IDC_STATIC,30,207,121,8
+    EDITTEXT        IDEDIT_DEPLOY_PRESENTATION_ID,27,222,204,14,
+                    ES_AUTOHSCROLL
+    LTEXT           "Presentation Builder application mode",IDC_STATIC,27,
+                    250,192,8
+    EDITTEXT        IDEDIT_DEPLOY_APPLICATION_MODE,29,267,132,14,
+                    ES_AUTOHSCROLL
+END
+
+IDD_XML_3270 DIALOGEX 0, 0, 251, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "3270 XML Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,54,266,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,144,266,50,14
+    LTEXT           "Host name / IP address",IDC_STATIC,19,18,117,8
+    EDITTEXT        IDEDIT_XML_3270_HOSTNAME,19,31,204,14,ES_AUTOHSCROLL
+    LTEXT           "Port number",IDC_STATIC,19,53,193,8
+    EDITTEXT        IDEDIT_XML_3270_PORTNUMBER,19,65,204,14,ES_AUTOHSCROLL
+    LTEXT           "[Text case]",IDC_STATIC,19,88,197,8
+    LTEXT           "[Backspace key handling]",IDC_STATIC,19,160,201,8
+    LISTBOX         IDLIST_XML_3270_TEXTCASE,19,100,205,27,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDLIST_XML_3270_BACKSPACE,19,172,205,27,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enable light pen",IDCHECK_XML_3270_LPENABLED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,140,197,10
+    LTEXT           "[XLateFileName]",IDC_STATIC,19,212,197,8
+    EDITTEXT        IDEDIT_XML_3270_XLATEFILE,19,224,205,14,ES_AUTOHSCROLL
+END
+
+IDD_XML_5250 DIALOGEX 0, 0, 251, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "5250 XML Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,51,262,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,137,262,50,14
+    LTEXT           "Host name / IP address",IDC_STATIC,19,18,117,8
+    EDITTEXT        IDEDIT_XML_5250_HOSTNAME,19,31,204,14,ES_AUTOHSCROLL
+    LTEXT           "Port number",IDC_STATIC,19,53,193,8
+    EDITTEXT        IDEDIT_XML_5250_PORTNUMBER,19,65,204,14,ES_AUTOHSCROLL
+    LTEXT           "[Text case]",IDC_STATIC,19,88,197,8
+    LISTBOX         IDLIST_XML_5250_TEXTCASE,19,100,205,27,
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "[Attribute style]",IDC_STATIC,19,137,191,8
+    LISTBOX         IDLIST_XML_5250_ATTRIBUTE_STYLE,19,149,205,27,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Numeric field override",
+                    IDCHECK_XML_5250_NUMERICFIELDOVERRIDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,189,206,10
+    CONTROL         "Destructive backspace",
+                    IDCHECK_XML_5250_DESTRUCIVE_BACKSPACE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,207,205,10
+    LTEXT           "[XLateFileName]",IDC_STATIC,19,228,197,8
+    EDITTEXT        IDEDIT_XML_5250_XLATEFILE,19,240,205,14,ES_AUTOHSCROLL
+END
+
+IDD_XML_VT DIALOGEX 0, 0, 251, 260
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "VT XML Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,59,222,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,124,222,50,14
+    LTEXT           "Host name / IP address",IDC_STATIC,19,18,117,8
+    EDITTEXT        IDEDIT_XML_VT_HOSTNAME,19,31,204,14,ES_AUTOHSCROLL
+    LTEXT           "Port number",IDC_STATIC,19,53,193,8
+    EDITTEXT        IDEDIT_XML_VT_PORTNUMBER,19,65,204,14,ES_AUTOHSCROLL
+    CONTROL         "Local echo of characters to screen",
+                    IDCHECK_XML_VT_LOCALMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,96,197,10
+    CONTROL         "Initiate Negotiation",IDCHECK_XML_VT_INITNEGOTIATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,113,186,10
+    CONTROL         "Negotiate binary",IDCHECK_XML_VT_NEGOTIATE_BINARY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,132,180,10
+    CONTROL         "Auto wrap",IDCHECK_XML_VT_AUTOWRAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,154,201,10
+    EDITTEXT        IDEDIT_XML_VT_TABCOLUMNS,19,186,40,14,ES_AUTOHSCROLL
+    LTEXT           "Columns between tab stops",IDC_STATIC,19,175,159,8
+END
+
+IDD_AIRVM_3270 DIALOGEX 0, 0, 296, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "3270 Host Address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,78,66,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,164,66,50,14
+    LTEXT           "3270 Host name / IP Address",IDC_STATIC,24,21,142,8
+    EDITTEXT        IDEDIT_AIRVM3270_HOSTADDR,21,34,247,14,ES_AUTOHSCROLL
+END
+
+IDD_AIRVM_UTS DIALOGEX 0, 0, 296, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "UTS Host Address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,78,174,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,164,174,50,14
+    LTEXT           "UTS Terminal ID",IDC_STATIC,21,21,142,8
+    EDITTEXT        IDEDIT_AIRVMUTS_HOSTADDR,21,32,247,14,ES_AUTOHSCROLL
+    LTEXT           "Environment name",IDC_STATIC,24,58,242,8
+    EDITTEXT        IDEDIT_AIRVMUTS_ENVNAME,21,69,247,14,ES_AUTOHSCROLL
+    LTEXT           "Transport",IDC_STATIC,21,97,240,8
+    EDITTEXT        IDEDIT_AIRVMUTS_TRANSPORT,21,108,247,14,ES_AUTOHSCROLL
+END
+
+IDD_AIRVM_T27 DIALOGEX 0, 0, 296, 132
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "T27 Connection parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,78,102,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,164,102,50,14
+    LTEXT           "T27 Host address",IDC_STATIC,24,21,249,8
+    EDITTEXT        IDEDIT_AIRVMT27_HOSTADDR,24,34,247,14,ES_AUTOHSCROLL
+    LTEXT           "Station ID",IDC_STATIC,24,60,245,8
+    EDITTEXT        IDEDIT_AIRVMT27_STATIONID,24,71,247,14,ES_AUTOHSCROLL
+END
+
+IDD_VHI_NEWSTRINGMAP DIALOGEX 0, 0, 235, 332
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "New AppConnStringMap"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,302,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,122,302,50,14
+    GROUPBOX        "Add name/value pairs",IDC_STATIC,25,46,181,242
+    CONTROL         "Add new string map (vs reuse old one)",
+                    IDCHECK_ADDNEWSTRINGMAP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,21,171,10
+    CONTROL         "",IDLIST_VHI_STRINGMAPPAIRS,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,36,163,163,110
+    LTEXT           "Name",IDC_STATIC,37,63,145,8
+    EDITTEXT        IDEDIT_VHI_STRINGMAP_NAME,36,75,163,14,ES_AUTOHSCROLL
+    LTEXT           "Value",IDC_STATIC,34,100,161,8
+    EDITTEXT        IDEDIT_VHI_STRINGMAP_VALUE,36,113,162,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add name/value",IDBUTTON_VHI_STRINGMAP_ADD,37,135,77,14
+    PUSHBUTTON      "Remove name/value",IDBUTTON_VHI_STRINGMAP_REMOVE,120,
+                    135,77,14
+END
+
+IDD_VHI_NEWSTRINGLIST DIALOGEX 0, 0, 235, 314
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "New AppConnStringList"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,62,279,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,122,279,50,14
+    CONTROL         "Add new string list (vs reuse old one)",
+                    IDCHECK_ADDNEWSTRINGLIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,21,135,10
+    GROUPBOX        "Add strings to list",IDC_STATIC,27,46,180,220
+    LTEXT           "New string",IDC_STATIC,37,63,147,8
+    EDITTEXT        IDEDIT_VHI_STRINGLIST_STRING,36,75,163,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add string",IDBUTTON_VHI_STRINGLIST_ADD,52,97,60,14
+    PUSHBUTTON      "Remove string",IDBUTTON_VHI_STRINGLIST_REMOVE,123,97,60,
+                    14
+    CONTROL         "",IDLIST_VHI_STRINGLIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,36,125,163,110
+END
+
+IDD_PERFORCE_GLOBALS DIALOGEX 0, 0, 480, 350
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Perforce Global Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,180,312,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,249,312,50,14
+    CONTROL         "-c : override client name",
+                    IDCHECK_PERFORCE_GLOBAL_CLIENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,39,93,10
+    GROUPBOX        "Specify global options",IDC_STATIC,23,20,438,282
+    EDITTEXT        IDEDIT_PERFORCE_CLIENT_OVERRIDE,152,39,297,14,
+                    ES_AUTOHSCROLL
+    CONTROL         "-d : override working directory",
+                    IDCHECK_PERFORCE_GLOBAL_PWD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,60,113,10
+    EDITTEXT        IDEDIT_PERFORCE_CLIENT_PWD,152,60,297,14,ES_AUTOHSCROLL
+    CONTROL         "-G : format output as Python dictionaries",
+                    IDCHECK_PERFORCE_PYTHON_DICTIONARIES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,33,81,147,10
+    CONTROL         "-H : override host setting",IDCHECK_PERFORCE_HOST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,102,97,10
+    CONTROL         "-p : override port setting",IDCHECK_PERFORCE_PORT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,123,95,10
+    CONTROL         "-P : override password setting",
+                    IDCHECK_PERFORCE_PASSWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,144,113,10
+    CONTROL         "-s : prepend output lines with descriptive field",
+                    IDCHECK_PERFORCE_PREPEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,165,162,10
+    CONTROL         "-u : override username",IDCHECK_PERFORCE_USERNAME,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,186,89,10
+    CONTROL         "-x : read from input file",IDCHECK_PERFORCE_INPUT_FILE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,207,90,10
+    CONTROL         "-C : override character set",
+                    IDCHECK_PERFORCE_CHARACTER_SET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,228,101,10
+    CONTROL         "-V : display P4 client version",
+                    IDCHECK_PERFORCE_VERSION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,249,105,10
+    CONTROL         "-h : display usage information",
+                    IDCHECK_PERFORCE_DISPLAY_HELP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,270,111,10
+    EDITTEXT        IDEDIT_PERFORCE_HOST,152,102,297,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_PERFORCE_PORT,152,123,297,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_PERFORCE_PASSWORD,152,144,297,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_PERFORCE_USERNAME,152,186,297,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_PERFORCE_FILENAME,152,207,297,14,ES_AUTOHSCROLL
+    EDITTEXT        IDEDIT_PERFORCE_CHARSET,152,228,297,14,ES_AUTOHSCROLL
+END
+
+IDD_CUSTOM_ACTIONS DIALOGEX 0, 0, 262, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Custom Action DLL"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,98,50,14
+    PUSHBUTTON      "Skip",IDCANCEL,144,98,50,14
+    LTEXT           "Custom Action class name",IDC_STATIC,21,20,147,8
+    EDITTEXT        IDEDIT_CUSTOMACTION_CLASS,21,31,183,14,ES_AUTOHSCROLL
+    LTEXT           "Custom Action function name",IDC_STATIC,21,58,183,8
+    EDITTEXT        IDEDIT_CUSTOMACTION_FUNCNAME,21,69,183,14,ES_AUTOHSCROLL
+END
+
+IDDLG_WIX_DLG DIALOGEX 0, 0, 429, 219
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "New WIX Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Specify new dialog properties",IDC_STATIC,18,19,384,158
+    LTEXT           "Dialog ID name",IDC_STATIC,30,36,208,8
+    EDITTEXT        IDEDIT_WIX_DLG_ID,30,48,212,14,ES_AUTOHSCROLL
+    LTEXT           "Dialog title (property name OK)",IDC_STATIC,30,70,213,8
+    EDITTEXT        IDEDIT_WIX_DLG_TITLE,30,82,212,14,ES_AUTOHSCROLL
+    LTEXT           "Bitmap ID name",IDC_STATIC,30,104,204,8
+    EDITTEXT        IDEDIT_WIX_BMP_ID,30,116,212,14,ES_AUTOHSCROLL
+    LTEXT           "Dialog background bitmap file",IDC_STATIC,30,138,211,8
+    EDITTEXT        IDEDIT_WIX_BMP_FILE,30,150,255,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDBUTTON_WIX_BMP,297,150,50,14
+    DEFPUSHBUTTON   "OK",IDOK,145,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,233,188,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "APIGen MFC Application"
+            VALUE "FileVersion", "0, 8, 0, 11"
+            VALUE "InternalName", "APIGen"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "APIGen.EXE"
+            VALUE "ProductName", "APIGen Application"
+            VALUE "ProductVersion", "0, 8, 0, 11"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 449
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+
+    IDD_APIGEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 533
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 424
+    END
+
+    IDD_DEPLOY_PARAMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 336
+    END
+
+    IDD_XML_3270, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_XML_5250, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_XML_VT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 244
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_AIRVM_3270, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_AIRVM_UTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_AIRVM_T27, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_VHI_NEWSTRINGMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 325
+    END
+
+    IDD_VHI_NEWSTRINGLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 307
+    END
+
+    IDD_PERFORCE_GLOBALS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 343
+    END
+
+    IDD_CUSTOM_ACTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDDLG_WIX_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 422
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_DEPLOYPARAMS   HTML                    "DeployParams.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About APIGen..."
+    IDS_CUSTOM_FILE         "Custom header and footer..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\APIGen.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

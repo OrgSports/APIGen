@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2003/01/wi">
+  <Fragment>
+    <UI>
+    <Property Id="BName" Value="DFile.bmp" />
+      <Dialog Id="DName" Width="370" Height="270" Title="DTitle" NoMinimize="yes">
+        <Property Id="BID" Value="BFile.bmp" />
+      </Dialog>
+    </UI>
+  </Fragment>
+</Wix>
