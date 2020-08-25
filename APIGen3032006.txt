@@ -1,0 +1,16 @@
+****************************************************************************
+                    AttachmateWRQ APIGen
+                   Perforce P4 Command File
+
+       This batch file features the use of Perforce P4 commands.
+
+
+   Generated:   Fri Mar 03 10:20:33 2006
+
+****************************************************************************
+
+ 
+;  ****** add
+p4 add  text  fileA.txt
+
+ 
